@@ -12,6 +12,9 @@
         android:theme="@style/Theme.VariasTablasDB"
         tools:targetApi="31">
         <activity
+            android:name=".RegistrarMascota"
+            android:exported="false" />
+        <activity
             android:name=".ConsultarListView"
             android:exported="false" />
         <activity

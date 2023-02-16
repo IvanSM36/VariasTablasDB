@@ -34,6 +34,10 @@ public class MainActivity extends AppCompatActivity {
                 miIntent = new Intent(MainActivity.this, ConsultarListView.class);
                 startActivity(miIntent);
                 break;
+            case R.id.btnRegMascota:
+                miIntent = new Intent(MainActivity.this, RegistrarMascota.class);
+                startActivity(miIntent);
+                break;
         }
     }
 }
