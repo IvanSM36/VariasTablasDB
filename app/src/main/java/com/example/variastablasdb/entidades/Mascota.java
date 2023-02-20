@@ -19,8 +19,18 @@ public class Mascota {
     }
     public Integer getIdDuenio(){return idDuenio;}
 
-    public void setIdDuenio(Integer idDuenio){ }
+    public void setIdDuenio(Integer idDuenio){this.idDuenio = idDuenio; }
 
+    public Integer getIdMascota(){return idMascota; }
 
+    public void setIdMascota(Integer idMascota){this.idMascota =  idMascota;}
+
+    public String getNombreMascota(){return nombreMascota;}
+
+    public void setNombreMascota(String nombreMascota){this.nombreMascota = nombreMascota;}
+
+    public String getRaza(){return raza;}
+
+    public void setRaza(String raza){this.raza = raza;}
 
 }

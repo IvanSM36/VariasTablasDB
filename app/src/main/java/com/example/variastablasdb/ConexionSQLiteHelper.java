@@ -6,6 +6,8 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
 
+import com.example.variastablasdb.utilidades.Utilidades;
+
 public class ConexionSQLiteHelper extends SQLiteOpenHelper {
 
     /* *
@@ -27,15 +29,17 @@ public class ConexionSQLiteHelper extends SQLiteOpenHelper {
         //Ejecuta la sentencia SQL que crea la tabla Usuario
         db.execSQL("CREATE TABLE usuario (id INTEGER, nombre TEXT, telefono TEXT)");
         // db.execSQL(Utilidades.CREAR_TABLA_USUARIO);
+        db.execSQL(Utilidades.CREAR_TABLA_MASCOTA);
     }
 
     /* *
-     *  Si existe una version antigua de la BBDD, la elimina y se uqeda con la nueva
+     *  Si existe una version antigua de la BBDD, la elimina y se queda con la nueva
      */
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         //Si existe la tabla usuarios. la borra y la vuelve a crear
         db.execSQL("DROP TABLE IF EXISTS usuarios");
+        db.execSQL("DROP TABLE IF EXISTS " + Utilidades.TABLA_MASCOTA);
         onCreate(db);
     }
 
